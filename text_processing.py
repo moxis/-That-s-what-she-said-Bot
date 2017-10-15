@@ -11,7 +11,7 @@ def snowball_stemming(text):
     return ' '.join(new_text)
 
 def eliminate_low_feature_words(text):
-    text_set = set(text.split()) - set(stopwords.words('english'))
+    text_set = set(text.split()) - (set(stopwords.words('english')) - {'she', 'her', 'herself', 'himself', 'he', 'him'})
     return ' '.join(text_set)
 
 def remove_punctuation(text):
