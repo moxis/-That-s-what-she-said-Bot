@@ -7,9 +7,7 @@ training_data = []
 for data in ['positive', 'negative']:
     with open('data/{}.txt'.format(data), 'r', errors='replace', encoding='utf-8') as handler:
         for string in handler.read().splitlines():
-            training_data.append((snowball_stemming(eliminate_low_feature_words(remove_punctuation(string.lower()))), data[0:3]))
-
-training_data = numpy.array(training_data)
+            training_data.append((snowball_stemming(remove_punctuation(string.lower())), data[0:3]))
 
 print('Starting training...')
 cl = NaiveBayesClassifier(training_data)

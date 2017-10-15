@@ -15,6 +15,6 @@ def eliminate_low_feature_words(text):
     return ' '.join(text_set)
 
 def remove_punctuation(text):
-    for punctuation in [',', '.', '!', ':', ';', '/', '"', "'"]:
+    for punctuation in [',', '.', '!', ':', ';', '/', '"']:
         text = text.replace(punctuation, '')
-    return text
+    return text.replace("'", ' ')
