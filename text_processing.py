@@ -3,8 +3,8 @@ nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
 
+stemmer = SnowballStemmer("english")
 def snowball_stemming(text):
-    stemmer = SnowballStemmer("english")
     new_text = []
     for word in text.split():
         new_text.append(stemmer.stem(word))
