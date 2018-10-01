@@ -31,5 +31,11 @@ $ python run.py
 That's it! Now you can interact with your hilarious bot. You can add this into group chats for extra fun.
 
 ## Example
+You can view the probability by replying to the phrase with "stats"
 
 ![Example](https://i.imgur.com/1NcilGq.png)
+
+You can easily retrain your bot to prevent certain phrases by replying "bad bot"
+
+![Retraining Example](https://i.imgur.com/1S36p64.png)
+
